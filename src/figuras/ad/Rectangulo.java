@@ -13,14 +13,18 @@ public class Rectangulo extends Figura{
 
     @Override
     public void calcularArea() {
-        float lado=p1.calcularDistancia(p2);
-        this.area=lado*lado;
+        float hipotenusa=p1.calcularDistancia(p2);
+        float base=(float) (hipotenusa*0.5);
+        float altura=(float) (hipotenusa*0.86);
+        this.area=base*altura;
     }
 
     @Override
     public void calcularPerimetro() {
-        float lado=p1.calcularDistancia(p2);
-        this.perimetro=lado*4;
+        float hipotenusa=p1.calcularDistancia(p2);
+        float base=(float) (hipotenusa*0.5);
+        float altura=(float) (hipotenusa*0.86);
+        this.perimetro=2*(base+altura);
     }
          @Override
     public float getArea() {
